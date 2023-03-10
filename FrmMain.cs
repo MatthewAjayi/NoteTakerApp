@@ -15,10 +15,10 @@ namespace NoteTakerApp
 {
     public partial class FrmMain : Form
     {
-        public FrmMain(string userName, User user)
+        public FrmMain()
         {
             InitializeComponent();
-            lblWelcomeUser.Text = userName;
+            lblWelcomeUser.Text = UserStatic.UserName.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,6 +43,18 @@ namespace NoteTakerApp
             FrmCreateNote frm = new FrmCreateNote();
             this.Hide();
             frm.ShowDialog();
+        }
+
+        private void btnViewNote_Click(object sender, EventArgs e)
+        {
+            FrmViewNotes frm = new FrmViewNotes(); 
+            this.Hide();
+            frm.ShowDialog();   
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

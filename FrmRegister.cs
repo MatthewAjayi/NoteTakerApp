@@ -29,9 +29,12 @@ namespace NoteTakerApp
                 check = BLL.UserBLL.CheckUser(user);
                 if(check == true)
                 {
+                    
+                    UserStatic.UserID = user.ID;
+                    UserStatic.UserName = user.Username;
                     BLL.UserBLL.AddUser(user);
                     MessageBox.Show("You have successfully created a new user!");
-                    FrmMain frm = new FrmMain(txtUserame.Text, user);
+                    FrmMain frm = new FrmMain();
                     this.Hide();
                     frm.ShowDialog();
                 }

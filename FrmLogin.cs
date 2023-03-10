@@ -62,7 +62,11 @@ namespace NoteTakerApp
                     MessageBox.Show("No values in db  with that username or password");
                 else
                 { 
-                    FrmMain frm = new FrmMain(txtUserame.Text,user);
+                    User loginUser = new User();
+                    loginUser = userList.First();
+                    UserStatic.UserID = loginUser.ID;
+                    UserStatic.UserName = loginUser.Username;
+                    FrmMain frm = new FrmMain();
                     this.Hide();    
                     frm.ShowDialog();   
                 }

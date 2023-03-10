@@ -22,10 +22,29 @@ namespace NoteTakerApp
 
         private void btnAddNote_Click(object sender, EventArgs e)
         {
-            Note note = new Note();
-            note.Title = txtTitle.Text;
-            note.Description = txtNote.Text;
-            NotesBLL.CreateNote(note);
+            if(txtTitle.Text.Trim() != ""  && txtNote.Text.Trim() != "")
+            {
+                
+                NewNote note = new NewNote();
+                note.Title = txtTitle.Text;
+                note.Description = txtNote.Text;
+                note.UserID = UserStatic.UserID;
+                NotesBLL.CreateNote(note);
+                MessageBox.Show("New note added!");
+            }
+
+            else
+            {
+                MessageBox.Show("Please ensure you have a title and a description!");
+            }
+            
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain();
+            this.Hide();
+            frmMain.ShowDialog();
         }
     }
 }

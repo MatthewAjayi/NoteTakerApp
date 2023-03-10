@@ -8,17 +8,26 @@ namespace DAL.DAO
 {
     public class NotesDAO : UserContext
     {
-        public static void CreateNote(Note note)
+        public static void CreateNote(NewNote note)
         {
 			try
 			{      
-                db.Notes.InsertOnSubmit(note);
+                db.NewNotes.InsertOnSubmit(note);
+                Console.WriteLine(note.UserID);
+                Console.WriteLine(note.ID);
                 db.SubmitChanges();
             }
 			catch (Exception ex)
 			{
-				throw ex;
+                Console.WriteLine(note.UserID);
+                Console.WriteLine(note.ID);
+                throw ex;
 			}
+        }
+
+        public static List<NewNote> GetNotes()
+        {
+            return db.NewNotes.ToList();
         }
     }
 }

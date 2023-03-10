@@ -33,6 +33,8 @@
             this.txtNote = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddNote = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -73,19 +75,42 @@
             // btnAddNote
             // 
             this.btnAddNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNote.Location = new System.Drawing.Point(293, 344);
+            this.btnAddNote.Location = new System.Drawing.Point(185, 341);
             this.btnAddNote.Name = "btnAddNote";
-            this.btnAddNote.Size = new System.Drawing.Size(174, 31);
+            this.btnAddNote.Size = new System.Drawing.Size(104, 31);
             this.btnAddNote.TabIndex = 4;
             this.btnAddNote.Text = "Add Note";
             this.btnAddNote.UseVisualStyleBackColor = true;
             this.btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Location = new System.Drawing.Point(305, 341);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(104, 31);
+            this.btnHome.TabIndex = 5;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(415, 341);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(104, 31);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Exit";
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // FrmCreateNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 401);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnAddNote);
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.label2);
@@ -106,5 +131,7 @@
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddNote;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

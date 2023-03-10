@@ -79,6 +79,7 @@
             this.btnViewNote.TabIndex = 4;
             this.btnViewNote.Text = "View Notes";
             this.btnViewNote.UseVisualStyleBackColor = true;
+            this.btnViewNote.Click += new System.EventHandler(this.btnViewNote_Click);
             // 
             // btnCreateNote
             // 
@@ -125,6 +126,7 @@
             this.Controls.Add(this.lblWelcomeUser);
             this.Name = "FrmMain";
             this.Text = "User Home Page";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
