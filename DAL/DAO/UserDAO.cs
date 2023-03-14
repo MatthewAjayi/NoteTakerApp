@@ -57,5 +57,20 @@ namespace DAL.DAO
                 return true; 
             }  
         }
+
+        public static void DeleteUser(int userID)
+        {
+            try
+            {
+                User user = db.Users.First(x => x.ID == userID);
+                db.Users.DeleteOnSubmit(user);
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

@@ -33,9 +33,9 @@ namespace DAL
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
-    partial void InsertNewNote(NewNote instance);
-    partial void UpdateNewNote(NewNote instance);
-    partial void DeleteNewNote(NewNote instance);
+    partial void InsertAllNote(AllNote instance);
+    partial void UpdateAllNote(AllNote instance);
+    partial void DeleteAllNote(AllNote instance);
     #endregion
 		
 		public UserDataClassDataContext() : 
@@ -76,11 +76,11 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<NewNote> NewNotes
+		public System.Data.Linq.Table<AllNote> AllNotes
 		{
 			get
 			{
-				return this.GetTable<NewNote>();
+				return this.GetTable<AllNote>();
 			}
 		}
 	}
@@ -195,8 +195,8 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NewNotes")]
-	public partial class NewNote : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AllNotes")]
+	public partial class AllNote : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -223,7 +223,7 @@ namespace DAL
     partial void OnUserIDChanged();
     #endregion
 		
-		public NewNote()
+		public AllNote()
 		{
 			OnCreated();
 		}
@@ -268,7 +268,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="VarChar(MAX)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="VarChar(50)")]
 		public string Description
 		{
 			get

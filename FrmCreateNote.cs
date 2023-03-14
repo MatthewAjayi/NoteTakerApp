@@ -25,7 +25,7 @@ namespace NoteTakerApp
             if(txtTitle.Text.Trim() != ""  && txtNote.Text.Trim() != "")
             {
                 
-                NewNote note = new NewNote();
+                AllNote note = new AllNote();
                 note.Title = txtTitle.Text;
                 note.Description = txtNote.Text;
                 note.UserID = UserStatic.UserID;
@@ -45,6 +45,31 @@ namespace NoteTakerApp
             FrmMain frmMain = new FrmMain();
             this.Hide();
             frmMain.ShowDialog();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

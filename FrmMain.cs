@@ -56,5 +56,18 @@ namespace NoteTakerApp
         {
             Application.Exit();
         }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this user", "Warning!!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                UserBLL.DeleteUser(UserStatic.UserID);
+                MessageBox.Show("User was deleted!");
+                FrmLogin frm = new FrmLogin();
+                this.Hide();
+                frm.ShowDialog();
+            }
+        }
     }
 }

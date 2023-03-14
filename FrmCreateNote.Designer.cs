@@ -46,6 +46,7 @@
             this.label1.Size = new System.Drawing.Size(43, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Title";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTitle
             // 
@@ -53,6 +54,7 @@
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(405, 20);
             this.txtTitle.TabIndex = 1;
+            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // txtNote
             // 
@@ -61,6 +63,7 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(405, 228);
             this.txtNote.TabIndex = 3;
+            this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label2
             // 
@@ -71,6 +74,7 @@
             this.label2.Size = new System.Drawing.Size(143, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Note Description";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnAddNote
             // 
@@ -103,6 +107,7 @@
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Exit";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // FrmCreateNote
             // 

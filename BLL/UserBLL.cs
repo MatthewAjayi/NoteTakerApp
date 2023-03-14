@@ -20,6 +20,11 @@ namespace BLL
             return UserDAO.CheckUser(user);
         }
 
+        public static void DeleteUser(int userID)
+        {
+            UserDAO.DeleteUser(userID);
+        }
+
         public static string GetUserName(string user)
         {
             return UserDAO.GetUserName(user);
